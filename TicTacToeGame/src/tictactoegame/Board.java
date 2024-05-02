@@ -1,7 +1,11 @@
+//BIT504AS2CHLOEWELSH5093569
+//Board.java
+
 package tictactoegame;
 
 import java.awt.*;
 
+// Represents the game board and contains methods to check for a draw and a win.
 public class Board {
 	// grid line width
 	public static final int GRID_WIDTH = 8;
@@ -46,8 +50,8 @@ public class Board {
 			return true; 
 		}		
 		// Check if the player has 3 in the playerCol.
-		if(cells[playerCol][0].content == thePlayer && cells[playerCol][1].content == thePlayer && cells[2][playerCol].content == thePlayer) {
-			return true;			
+		if(cells[0][playerCol].content == thePlayer && cells[1][playerCol].content == thePlayer && cells[2][playerCol].content == thePlayer) {
+		    return true;            
 		}
 				
 		 // 3-in-the-diagonal
