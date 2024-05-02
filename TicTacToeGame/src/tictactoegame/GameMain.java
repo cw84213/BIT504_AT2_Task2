@@ -27,8 +27,7 @@ public class GameMain extends JPanel implements MouseListener{
 	// the game board 
 	private Board board;
 	 	 
-	//TODO: create the enumeration for the variable below (GameState currentState)
-	//HINT all of the states you require are shown in the code within GameMain
+	// Create the enumeration for the variable below (GameState currentState)
 	private GameState currentState; 
 	
 	// the current player
@@ -40,7 +39,7 @@ public class GameMain extends JPanel implements MouseListener{
 	/** Constructor to setup the UI and game components on the panel */
 	public GameMain() {
 				
-		// TODO: This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
+		// This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
 		addMouseListener(this);
 	    
 		// Setup the status bar (JLabel) to display status message       
@@ -56,10 +55,10 @@ public class GameMain extends JPanel implements MouseListener{
 		// account for statusBar height in overall height
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));		
 		
-		// TODO: Create a new instance of the game "Board"class. HINT check the variables above for the correct name
+		// Create a new instance of the game "Board"class. HINT check the variables above for the correct name
 		board = new Board();		
 
-		//TODO: call the method to initialise the game board
+		// Call the method to initialise the game board
 		initGame();
 	}
 	
@@ -70,14 +69,14 @@ public class GameMain extends JPanel implements MouseListener{
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
 				
-				//TODO: create the new GameMain panel and add it to the frame
+				// Create the new GameMain panel and add it to the frame
 				// Create the new GameMain panel
 				GameMain gameMainPanel = new GameMain();
 
 				// Add the GameMain panel to the frame
 				frame.getContentPane().add(gameMainPanel);				
 				
-				//TODO: set the default close operation of the frame to exit_on_close
+				// Set the default close operation of the frame to exit_on_close
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
 				
 				frame.pack();             
@@ -100,12 +99,12 @@ public class GameMain extends JPanel implements MouseListener{
 			statusBar.setForeground(Color.BLACK);          
 			if (currentPlayer == Player.Cross) {   
 			
-				//TODO: use the status bar to display the message "X"'s Turn
+				// Use the status bar to display the message "X"'s Turn
 				statusBar.setText("X's Turn");
 				
 			} else {    
 				
-				//TODO: use the status bar to display the message "O"'s Turn
+				// Use the status bar to display the message "O"'s Turn
 				statusBar.setText("O's Turn");
 				
 			}       
@@ -144,7 +143,7 @@ public class GameMain extends JPanel implements MouseListener{
 			//check for win after play
 			if(board.hasWon(thePlayer, row, col)) {
 				
-				// TODO: check which player has won and update the currentstate to the appropriate gamestate for the winner
+				// Check which player has won and update the currentstate to the appropriate gamestate for the winner
 				if (thePlayer == Player.Cross) {
 				    currentState = GameState.Cross_won;
 				} else {
@@ -154,7 +153,7 @@ public class GameMain extends JPanel implements MouseListener{
 			} else 
 				if (board.isDraw ()) {
 					
-				// TODO: set the currentstate to the draw gamestate
+				// Set the currentstate to the draw gamestate
 				currentState = GameState.Draw;
 			}
 			//otherwise no change to current state of playing
@@ -192,7 +191,7 @@ public class GameMain extends JPanel implements MouseListener{
 			initGame();            
 		}   
 		
-		//TODO: redraw the graphics on the UI          
+		// Redraw the graphics on the UI          
         repaint();
 	}
 		
