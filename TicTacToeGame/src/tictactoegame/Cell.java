@@ -1,3 +1,6 @@
+//BIT504AS2CHLOEWELSH5093569
+//Cell.java
+
 package tictactoegame;
 
 import java.awt.BasicStroke;
@@ -5,6 +8,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+//Represents an individual cell in the Tic Tac Toe game board.
 public class Cell {
     //content of this cell (empty, cross, nought)
 	Player content;

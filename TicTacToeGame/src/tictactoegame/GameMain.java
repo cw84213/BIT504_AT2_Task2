@@ -1,9 +1,13 @@
+//BIT504AS2CHLOEWELSH5093569
+//GameMain.java
+
 package tictactoegame;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// Represents the main game panel and handles user interactions.
 public class GameMain extends JPanel implements MouseListener{
 	//Constants for game 
 	//Number of ROWS by COLS cell constants 
