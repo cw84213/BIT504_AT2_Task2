@@ -1,6 +1,7 @@
 //BIT504AS2CHLOEWELSH5093569
 //Player.java
 
+// Package name for the Tic Tac Toe Game
 package tictactoegame;
 
 /**
